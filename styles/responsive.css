@@ -1,0 +1,98 @@
+@media screen and (max-width: 890px) {
+  .info-container {
+    justify-content: center;
+  }
+  .info-container h1 {
+    margin-top: 0;
+  }
+  .image {
+    height: 600px;
+    width: 400px;
+    background-size: cover;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 785px) {
+  .card {
+    flex-direction: column-reverse;
+    padding: 24px;
+    max-width: 500px;
+  }
+  .info-container {
+    width: 100%;
+    margin: 0;
+  }
+  .info-container h1 {
+    margin-top: 30px;
+  }
+  .info-container ul {
+    margin-bottom: 16px;
+  }
+  .image {
+    background-image: url(../assets/images/illustration-sign-up-mobile.svg);
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .image {
+    height: 200px;
+  }
+  .succes-card {
+    max-width: 300px;
+    padding: 24px 32px 32px 24px;
+  }
+  .succes-card button {
+    padding: 18px 20px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    padding: 0;
+    margin: auto;
+    height: 100%;
+  }
+  .card {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    justify-content: flex-end;
+  }
+  .image {
+    width: 100%;
+    height: 284px;
+    border-radius: 0 0 20px 20px;
+  }
+  .info-container {
+    width: calc(100% - 44px);
+    margin: 0;
+    padding: 0px 22px 40px 22px;
+  }
+  .info-container h1 {
+    margin-top: 36px;
+  }
+  .info-container ul {
+    margin-bottom: 16px;
+  }
+  form button {
+    padding: 20px 48px 20px 48px;
+  }
+  .succes-card {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    padding: 148px 22px 40px 22px;
+  }
+  .succes-card h1 {
+    margin-top: 35px;
+  }
+  .succes-card .succes-img {
+    margin: 0;
+  }
+  .succes-card button {
+    margin-top: auto;
+  }
+}/*# sourceMappingURL=responsive.css.map */

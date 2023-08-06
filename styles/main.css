@@ -1,4 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/roboto-bold-webfont.woff2) format("woff2"), url(/assets/fonts/roboto-bold-webfont.woff) format("woff");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/roboto-regular-webfont.woff2) format("woff2"), url(/assets/fonts/roboto-regular-webfont.woff) format("woff");
+  font-weight: 400;
+}
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.info-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.email-container span {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+form button {
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: Roboto;
+}
+form input {
+  font-size: 1rem;
+}
+
+.succes-card h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.succes-card p {
+  line-height: 1.5;
+}
+.succes-card button {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.send-email {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 785px) {
+  .info-container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 535px) {
+  .succes-card h1 {
+    font-size: 2rem;
+  }
+  .succes-card p {
+    font-size: 0.88rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .info-container {
+    font-size: 1rem;
+  }
+  .info-container h1 {
+    font-size: 2.5rem;
+  }
+  .succes-card h1 {
+    font-size: 2.5rem;
+  }
+  .succes-card p {
+    font-size: 1.1rem;
+  }
+}
+:root {
+  font-size: 16px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,16 +85,15 @@
 
 body {
   background-color: hsl(234, 29%, 20%);
-  font-family: Roboto, sans-serif;
 }
 
 .container {
   max-width: 1440px;
   height: 100vh;
   margin: auto;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
-  padding: 0 20px;
 }
 
 .card {
@@ -26,19 +104,20 @@ body {
   padding: 24px 24px 24px 64px;
   border-radius: 30px;
   justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .info-container {
   color: hsl(234, 29%, 20%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 45%;
   margin-right: 40px;
 }
 .info-container h1 {
-  font-size: 56px;
-  font-weight: 700;
   margin-bottom: 21px;
-  margin-top: 94px;
 }
 .info-container ul {
   list-style-type: none;
@@ -64,10 +143,6 @@ body {
   justify-content: space-between;
   margin-bottom: 12px;
 }
-.email-container span {
-  font-size: 12px;
-  font-weight: 700;
-}
 
 form {
   display: flex;
@@ -80,13 +155,11 @@ form input {
   margin-bottom: 24px;
 }
 form button {
-  padding: 20px 72px 20px 72px;
+  padding: 20px 60px 20px 60px;
   background-color: hsl(234, 29%, 20%);
   color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 10px;
-  font-weight: 700;
-  font-family: Roboto;
 }
 form button:hover {
   background: linear-gradient(270deg, #FF693E 0%, rgba(255, 105, 62, 0) 100%), #FF5478;
@@ -124,12 +197,9 @@ form button:hover {
   border-radius: 30px;
 }
 .succes-card h1 {
-  font-size: 56px;
-  font-weight: 700;
   margin-bottom: 24px;
 }
 .succes-card p {
-  line-height: 1.5;
   margin-bottom: 44px;
 }
 .succes-card button {
@@ -138,18 +208,12 @@ form button:hover {
   color: hsl(0, 0%, 100%);
   border: none;
   border-radius: 10px;
-  font-size: 14px;
-  font-weight: 700;
   transition: 0.3s;
 }
 .succes-card button:hover {
   background: linear-gradient(270deg, #FF693E 0%, rgba(255, 105, 62, 0) 100%), #FF5478;
   transition: 0.3s;
   box-shadow: 0px 5px 20px #FF5478;
-}
-
-.send-email {
-  font-weight: 700;
 }
 
 .succes-img {
@@ -184,11 +248,11 @@ form button:hover {
     max-width: 500px;
   }
   .info-container {
+    width: 100%;
     margin: 0;
   }
   .info-container h1 {
     margin-top: 30px;
-    font-size: 48px;
   }
   .info-container ul {
     margin-bottom: 16px;
@@ -208,12 +272,6 @@ form button:hover {
   .succes-card {
     max-width: 300px;
     padding: 24px 32px 32px 24px;
-  }
-  .succes-card h1 {
-    font-size: 32px;
-  }
-  .succes-card p {
-    font-size: 14px;
   }
   .succes-card button {
     padding: 18px 20px;
@@ -237,13 +295,12 @@ form button:hover {
     border-radius: 0 0 20px 20px;
   }
   .info-container {
+    width: calc(100% - 44px);
     margin: 0;
     padding: 0px 22px 40px 22px;
-    font-size: 16px;
   }
   .info-container h1 {
     margin-top: 36px;
-    font-size: 40px;
   }
   .info-container ul {
     margin-bottom: 16px;
@@ -259,11 +316,7 @@ form button:hover {
     padding: 148px 22px 40px 22px;
   }
   .succes-card h1 {
-    font-size: 40px;
     margin-top: 35px;
-  }
-  .succes-card p {
-    font-size: 18px;
   }
   .succes-card .succes-img {
     margin: 0;

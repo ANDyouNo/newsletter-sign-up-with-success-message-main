@@ -1,0 +1,78 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.info-container {
+  h1 {
+    font-size: 3.5rem; //56px
+    font-weight: 700;
+  }
+}
+.email-container {
+  span {
+    font-size: 0.75rem; //12px
+    font-weight: 700;
+  }
+}
+form {
+  button {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: Roboto;
+  }
+  input {
+    font-size: 1rem;
+  }
+}
+.succes-card {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  p {
+    line-height: 1.5;
+  }
+  button{
+    font-size: 1rem; 
+    font-weight: 700;
+  }
+}
+.send-email {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 785px) {
+  .info-container {
+    h1 {
+      font-size: 3rem; //48px
+    }
+  }
+}
+
+@media screen and (max-width: 535px) {
+  .succes-card {
+    h1 {
+      font-size: 2rem; //32px
+    }
+    p {
+      font-size: 0.88rem; //~14px
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .info-container {
+    font-size: 1rem;
+    h1 {
+      font-size: 2.5rem; //40px
+    }
+  }
+  .succes-card {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.1rem; //~18px
+    }
+  }
+} 

@@ -1,26 +1,49 @@
-const inp = document.querySelector('input')
+const userEmail = document.querySelector('input')
 const subscribeBtn = document.querySelector('.subscribe')
-const emailSend = document.querySelector('.send-email')
-const errMsg = document.querySelector('.error')
+const emailToSend = document.querySelector('.send-email')
+const errorAlert = document.querySelector('.error')
 const mainCard = document.querySelector('.card')
-const succesCard = document.querySelector('.succes-card')
+const successCard = document.querySelector('.succes-card')
 const closeBtn = document.querySelector('.close')
+const inputForm = document.querySelector('form')
 
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
 
+inputForm.addEventListener('submit', event => {
+  event.preventDefault()
+})
+
 subscribeBtn.addEventListener('click', function() {
-  if (EMAIL_REGEXP.test(inp.value) == false) {
-    errMsg.classList.remove('none')
-    inp.classList.add('err-input')
+  if (EMAIL_REGEXP.test(userEmail.value) == false) {
+    errorAlert.classList.remove('none')
+    userEmail.classList.add('err-input')
   }
   else {
-    errMsg.classList.add('none')
-    inp.classList.remove('err-input')
+    errorAlert.classList.add('none')
+    userEmail.classList.remove('err-input')
     mainCard.classList.add('none')
-    succesCard.classList.remove('none')
-    emailSend.innerText = inp.value 
+    successCard.classList.remove('none')
+    emailToSend.innerText = userEmail.value 
   }
 })
+
 closeBtn.addEventListener('click', function() {
-  succesCard.classList.add('none')
+  successCard.classList.add('none')
+})
+
+//now press enter start validation too
+userEmail.addEventListener( 'keyup', event => {
+  if(event.code === 'Enter') {
+    if (EMAIL_REGEXP.test(userEmail.value) == false) {
+      errorAlert.classList.remove('none')
+      userEmail.classList.add('err-input')
+    }
+    else {
+      errorAlert.classList.add('none')
+      userEmail.classList.remove('err-input')
+      mainCard.classList.add('none')
+      successCard.classList.remove('none')
+      emailToSend.innerText = userEmail.value 
+    }
+  }
 })
